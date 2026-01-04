@@ -7,7 +7,7 @@ A pre-configured [Obsidian](https://obsidian.md) vault for managing tasks, proje
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/dannysmith/obsidian-taskdn-starter-vault my-tasks
+   git clone https://github.com/dannysmith/tdn-obsidian-starter-vault my-tasks
    cd my-tasks
    rm -rf .git README.md
    ```
