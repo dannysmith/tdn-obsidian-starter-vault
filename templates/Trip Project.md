@@ -19,6 +19,10 @@ end-date:
 
 
 
+## Tasks
+
+![[Tasks.base#Linked Tasks]]
+
 ## Planning Checklist
 
 - [ ] Confirm dates

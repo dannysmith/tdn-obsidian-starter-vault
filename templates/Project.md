@@ -11,6 +11,10 @@ end-date:
 
 
 
+## Tasks
+
+![[Tasks.base#Linked Tasks]]
+
 ## Next Steps
 
 - [ ]

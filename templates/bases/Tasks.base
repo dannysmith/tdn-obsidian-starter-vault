@@ -2,8 +2,10 @@ filters:
   and:
     - file.inFolder("tasks")
     - file.name != "Overview"
+formulas:
+  name: 'file.asLink(if(title, title, file.basename))'
 properties:
-  file.name:
+  formula.name:
     displayName: Task
   note.status:
     displayName: Status
@@ -11,105 +13,151 @@ properties:
     displayName: Due
   note.scheduled:
     displayName: Scheduled
+  note.defer-until:
+    displayName: Deferred Until
   note.projects:
     displayName: Project
   note.area:
     displayName: Area
-  note.defer-until:
-    displayName: Deferred Until
+  note.completed-at:
+    displayName: Completed
+  note.updated-at:
+    displayName: Updated
 views:
-  - type: table
-    name: All Tasks
+  - type: kanban
+    name: Board
+    filters:
+      and:
+        - '!file.inFolder("tasks/archive")'
+        - not:
+            - 'note["defer-until"] > today()'
+    groupBy:
+      property: status
+      direction: ASC
+    groupOrder:
+      - inbox
+      - ready
+      - in-progress
+      - blocked
+      - done
     order:
-      - file.name
+      - formula.name
+      - due
+      - projects
+      - area
+    sort:
+      - property: due
+        direction: ASC
+  - type: table
+    name: Today
+    filters:
+      and:
+        - '!file.inFolder("tasks/archive")'
+        - status != "done"
+        - status != "dropped"
+        - status != "icebox"
+        - not:
+            - 'note["defer-until"] > today()'
+        - or:
+            - status == "in-progress"
+            - due <= today()
+            - scheduled <= today()
+            - 'note["defer-until"] >= today()'
+    order:
+      - formula.name
       - status
       - due
+      - scheduled
+      - projects
+      - area
+    sort:
+      - property: due
+        direction: ASC
+      - property: scheduled
+        direction: ASC
+  - type: table
+    name: Upcoming
+    filters:
+      and:
+        - '!file.inFolder("tasks/archive")'
+        - status != "done"
+        - status != "dropped"
+        - or:
+            - 'due > today() && due <= today() + "14d"'
+            - 'scheduled > today() && scheduled <= today() + "14d"'
+            - 'note["defer-until"] > today() && note["defer-until"] <= today() + "14d"'
+    order:
+      - formula.name
+      - status
+      - due
+      - scheduled
+      - defer-until
       - projects
     sort:
       - property: due
         direction: ASC
-      - property: file.name
+      - property: scheduled
         direction: ASC
   - type: table
     name: Active
     filters:
       and:
-        - note.status != "done"
-        - note.status != "dropped"
-        - note.status != "icebox"
-        - or:
-            - note.defer-until <= today()
-            - note.defer-until == null
+        - '!file.inFolder("tasks/archive")'
+        - status != "done"
+        - status != "dropped"
+        - status != "icebox"
+        - not:
+            - 'note["defer-until"] > today()'
+    groupBy:
+      property: status
+      direction: ASC
+    groupOrder:
+      - in-progress
+      - blocked
+      - ready
+      - inbox
     order:
-      - file.name
-      - status
+      - formula.name
       - due
       - scheduled
       - projects
+      - area
     sort:
       - property: due
         direction: ASC
-      - property: file.name
-        direction: ASC
   - type: table
-    name: Inbox
-    filters:
-      and:
-        - note.status == "inbox"
+    name: All
     order:
-      - file.name
+      - formula.name
+      - status
+      - due
+      - projects
+      - area
+      - updated-at
     sort:
-      - property: file.ctime
+      - property: updated-at
         direction: DESC
   - type: table
-    name: Ready
+    name: Linked Tasks
     filters:
       and:
-        - note.status == "ready"
+        - file.hasLink(this.file)
+    groupBy:
+      property: status
+      direction: ASC
+    groupOrder:
+      - in-progress
+      - blocked
+      - ready
+      - inbox
+      - icebox
+      - done
+      - dropped
     order:
-      - file.name
+      - formula.name
       - due
       - scheduled
-      - projects
-    sort:
-      - property: due
-        direction: ASC
-  - type: table
-    name: In Progress
-    filters:
-      and:
-        - note.status == "in-progress"
-    order:
-      - file.name
-      - due
-      - projects
-    sort:
-      - property: due
-        direction: ASC
-  - type: table
-    name: Blocked
-    filters:
-      and:
-        - note.status == "blocked"
-    order:
-      - file.name
-      - due
-      - projects
-    sort:
-      - property: due
-        direction: ASC
-  - type: table
-    name: Overdue
-    filters:
-      and:
-        - note.due < today()
-        - note.status != "done"
-        - note.status != "dropped"
-    order:
-      - file.name
-      - status
-      - due
-      - projects
+      - completed-at
     sort:
       - property: due
         direction: ASC

@@ -13,22 +13,24 @@ properties:
     displayName: Description
 views:
   - type: table
+    name: Active
+    filters:
+      not:
+        - status == "archived"
+    order:
+      - file.name
+      - type
+      - description
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
     name: All Areas
     order:
       - file.name
       - status
       - type
-    sort:
-      - property: file.name
-        direction: ASC
-  - type: table
-    name: Active
-    filters:
-      not:
-        - note.status == "archived"
-    order:
-      - file.name
-      - type
+      - description
     sort:
       - property: file.name
         direction: ASC

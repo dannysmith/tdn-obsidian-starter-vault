@@ -16,6 +16,42 @@ properties:
   note.description:
     displayName: Description
 views:
+  - type: kanban
+    name: Board
+    groupBy:
+      property: status
+      direction: ASC
+    groupOrder:
+      - planning
+      - ready
+      - in-progress
+      - paused
+      - blocked
+      - done
+    order:
+      - file.name
+      - area
+      - end-date
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Active
+    filters:
+      or:
+        - status == "in-progress"
+        - status == "planning"
+        - status == "ready"
+    order:
+      - file.name
+      - status
+      - area
+      - end-date
+    sort:
+      - property: status
+        direction: ASC
+      - property: file.name
+        direction: ASC
   - type: table
     name: All Projects
     order:
@@ -23,37 +59,31 @@ views:
       - status
       - area
       - start-date
+      - end-date
     sort:
       - property: status
         direction: ASC
       - property: file.name
         direction: ASC
   - type: table
-    name: Active
+    name: Linked Projects
     filters:
-      or:
-        - note.status == "in-progress"
-        - note.status == "planning"
-        - note.status == "ready"
+      and:
+        - file.hasLink(this.file)
+    groupBy:
+      property: status
+      direction: ASC
+    groupOrder:
+      - in-progress
+      - planning
+      - ready
+      - paused
+      - blocked
+      - done
     order:
       - file.name
-      - status
-      - area
-    sort:
-      - property: status
-        direction: ASC
-      - property: file.name
-        direction: ASC
-  - type: table
-    name: On Hold
-    filters:
-      or:
-        - note.status == "paused"
-        - note.status == "blocked"
-    order:
-      - file.name
-      - status
-      - area
+      - start-date
+      - end-date
     sort:
       - property: file.name
         direction: ASC

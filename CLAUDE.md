@@ -8,7 +8,8 @@ This is a Taskdn vault for personal task and project management.
 - `projects/` - Project files (collections of tasks)
 - `areas/` - Life area files (ongoing responsibilities)
 - `templates/` - Obsidian templates and bases
-- `Overview.md` files - Auto-generated views, don't edit directly
+- `Start Here.md` - Dashboard note the vault opens on
+- `Overview.md` files - Embedded Bases views, don't edit directly
 
 ## Task Management
 

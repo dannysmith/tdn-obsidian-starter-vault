@@ -1,0 +1,10 @@
+{
+  "types": {
+    "due": "date",
+    "scheduled": "date",
+    "defer-until": "date",
+    "start-date": "date",
+    "end-date": "date",
+    "projects": "multitext"
+  }
+}
