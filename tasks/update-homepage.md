@@ -1,9 +1,9 @@
 ---
 title: Update homepage copy and layout
 status: in-progress
-created-at: 2026-01-02
-updated-at: 2026-01-04
-due: 2026-01-10
+created-at: 2026-10-26
+updated-at: 2026-11-14
+due: 2026-11-15
 scheduled:
 defer-until:
 projects:
@@ -13,8 +13,8 @@ area:
 
 Working on the main homepage layout. Need to:
 
-- Finalize hero section copy
+- Finalise hero section copy
 - Add project showcase grid
 - Implement the "about me" section
 
-Currently blocked on finalizing the colour palette - need to make a decision and commit.
+The colour palette is settled now (see [[choose-colour-palette]]), so the remaining work is mostly copy.

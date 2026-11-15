@@ -1,10 +1,10 @@
 ---
 title: Fix mobile navigation menu
 status: ready
-created-at: 2026-01-03
-updated-at: 2026-01-03
+created-at: 2026-11-01
+updated-at: 2026-11-12
 due:
-scheduled:
+scheduled: 2026-11-15
 defer-until:
 projects:
   - "[[Website Redesign]]"

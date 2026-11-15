@@ -1,8 +1,8 @@
 ---
 title: Read Rust Book chapter 5
 status: ready
-created-at: 2025-12-15
-updated-at: 2025-12-15
+created-at: 2026-07-20
+updated-at: 2026-07-20
 due:
 scheduled:
 defer-until:

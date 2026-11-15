@@ -1,13 +1,13 @@
 ---
 title: Backup laptop to external drive
 status: ready
-created-at: 2026-01-01
-updated-at: 2026-01-01
+created-at: 2026-10-16
+updated-at: 2026-10-16
 due:
-scheduled: 2026-01-11
+scheduled: 2026-11-12
 defer-until:
 projects:
-area: "[[Side Projects]]"
+area: "[[Home]]"
 ---
 
 Monthly backup routine. Make sure to:

@@ -1,15 +1,15 @@
 ---
-title: Japan Trip 2025
+title: Japan Trip
 status: in-progress
 area:
-description: Two-week trip to Japan in autumn 2025.
-start-date: 2025-01-10
-end-date:
+description: Two-week trip to Japan, taking in Tokyo, Hakone and Kyoto.
+start-date: 2026-10-16
+end-date: 2027-04-08
 ---
 
 ## Dates & Itinerary
 
-**Target dates:** Late October / early November 2025 (autumn colours)
+**Pencilled in:** 2027-03-25 to 2027-04-08, waiting on Sam to confirm.
 
 ### Week 1: Tokyo & Surroundings
 - 3-4 days in Tokyo (Shibuya, Shinjuku, Akihabara)
@@ -24,7 +24,7 @@ end-date:
 
 ## Transport
 
-- Flights: Need to book (targeting June for best prices)
+- Flights: return to Tokyo, Haneda or Narita
 - JR Pass: 14-day pass for regional trains
 
 ## Accommodation
@@ -34,14 +34,22 @@ Mix of hotels and traditional ryokan. Looking at:
 - Hakone: Ryokan with onsen
 - Kyoto: Traditional machiya guesthouse
 
+## Tasks
+
+![[Tasks.base#Linked Tasks]]
+
 ## Planning Checklist
 
-- [ ] Confirm exact dates
-- [ ] Book flights
-- [ ] Book accommodation
-- [ ] Order JR Pass
-- [ ] Check passport validity
+- [x] Pencil in dates
+- [[renew-passport]]
+- [[book-flights]]
+- Accommodation
+	- [[research-ryokans]]
+	- [ ] Book Tokyo hotel
+	- [ ] Book Kyoto guesthouse
+- [[order-jr-pass]]
 - [ ] Research visa requirements
+- [ ] Sort out travel insurance
 
 ## Kit List
 
@@ -56,6 +64,6 @@ Estimated $4000-5000 total including flights.
 
 ## Notes
 
-- Ask Emma for restaurant recommendations (she went last year)
+- Ask Emma for restaurant recommendations (she's been twice)
 - Look into Suica card for local transport
 - Download offline maps for Tokyo and Kyoto

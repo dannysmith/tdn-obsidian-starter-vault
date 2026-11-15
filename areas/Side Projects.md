@@ -16,10 +16,21 @@ I'm doing well in this area if...
 
 ## Projects
 
-![[AreaProjects.base#Area Projects]]
+![[Projects.base#Linked Projects]]
+
+## Tasks
+
+![[Tasks.base#Linked Tasks]]
 
 ## Potential Future Projects
 
 - Build a CLI tool in Go
-- Learn WebAssembly
 - Contribute to an open source project
+
+## Potential Future Tasks
+
+Plain checkboxes for ideas that aren't tasks yet. With the Taskdn plugin, right-click one to turn it into a task file.
+
+- [ ] Write a blog post about the website rebuild
+- [ ] Try a new code editor for a week
+- [ ] Tidy up old GitHub repos

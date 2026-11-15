@@ -1,5 +1,3 @@
-# Example Note
-
 This note demonstrates how the **obsidian-taskdn** plugin renders task links as interactive widgets.
 
 ---
@@ -35,7 +33,25 @@ The plugin shows different visual indicators for each status:
 - [[fix-mobile-nav]] - ready
 - [[update-homepage]] - in-progress
 - [[book-flights]] - blocked
+- [[try-webassembly]] - icebox
 - [[archive/setup-dev-env]] - done
+- [[archive/migrate-wordpress-comments]] - dropped
+
+---
+
+## Mixing Tasks and Checklists
+
+Task links and plain checkboxes can share a list at any indent level. Ticking a task's checkbox updates the task file; plain checkboxes work as normal. Right-click a plain checkbox to convert it into a task file.
+
+- [[book-dentist]]
+	- [x] Find the surgery's phone number
+	- [ ] Check which mornings are free
+- [[renew-passport]]
+	- [ ] Get new photos taken
+	- [[book-flights]]
+		- [ ] Compare Haneda and Narita prices
+- [ ] Water the plants
+- [[choose-colour-palette]]
 
 ---
 
@@ -44,7 +60,7 @@ The plugin shows different visual indicators for each status:
 Links to projects and areas render as normal Obsidian links (not task widgets):
 
 - [[Website Redesign]] - a project
-- [[Japan Trip 2025]] - another project
+- [[Japan Trip]] - another project
 - [[Side Projects]] - an area
 
 This is intentional - only files in the `tasks/` directory become task widgets.
@@ -55,11 +71,11 @@ This is intentional - only files in the `tasks/` directory become task widgets.
 
 Real notes often mix task links with other content:
 
-Working on the [[Website Redesign]] project this week. Main priorities:
+Focusing on the [[Website Redesign]] project at the moment. Main priorities:
 
-- [[update-homepage]] - need to finish by Friday
+- [[update-homepage]] - the big one, due first
 - [[fix-mobile-nav]] - quick fix, do this first
 
-Also want to look at [[research-ryokans]] but that's deferred until closer to the trip.
+Also want to look at [[research-ryokans]] for the [[Japan Trip]], now that it's no longer deferred.
 
-The [[backup-laptop]] task is scheduled for the weekend - it's a routine maintenance thing that belongs to the [[Side Projects]] area rather than any specific project.
+The [[backup-laptop]] task is routine maintenance that belongs to the [[Home]] area rather than any specific project.

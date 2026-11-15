@@ -1,9 +1,9 @@
 ---
 title: Set up development environment
 status: done
-created-at: 2026-01-01
-updated-at: 2026-01-02
-completed-at: 2026-01-02
+created-at: 2026-10-03
+updated-at: 2026-10-06
+completed-at: 2026-10-06
 due:
 scheduled:
 defer-until:

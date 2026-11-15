@@ -3,8 +3,8 @@ title: Website Redesign
 status: in-progress
 area: "[[Side Projects]]"
 description: Rebuild personal website with modern stack.
-start-date: 2025-01-05
-end-date:
+start-date: 2026-10-01
+end-date: 2026-11-27
 ---
 
 ## Overview
@@ -19,9 +19,24 @@ Rebuilding my personal website from scratch. Moving from the old WordPress setup
 - Contact form that actually works
 - Mobile-first responsive layout
 
-## Next Steps
+## Project Plan
 
-- [ ] Finish homepage layout
-- [ ] Set up blog post templates
-- [ ] Migrate old content
+- [[setup-dev-env]]
+- [[choose-colour-palette]]
+- [[update-homepage]]
+	- [x] Hero section copy
+	- [ ] Project showcase grid
+	- [ ] "About me" section
+- [[fix-mobile-nav]]
+- Blog
+	- [[blog-post-templates]]
+	- [ ] Move old posts across
+		- [ ] Export from WordPress
+		- [ ] Convert to markdown
+	- [[migrate-wordpress-comments]]
 - [ ] Configure deployment pipeline
+- [ ] Set up analytics
+
+## Tasks
+
+![[Tasks.base#Linked Tasks]]

@@ -1,8 +1,8 @@
 ---
 title: App idea - habit tracker with streaks
 status: inbox
-created-at: 2026-01-04
-updated-at: 2026-01-04
+created-at: 2026-11-14
+updated-at: 2026-11-14
 due:
 scheduled:
 defer-until:

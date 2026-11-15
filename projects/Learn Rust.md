@@ -3,7 +3,7 @@ title: Learn Rust
 status: paused
 area: "[[Side Projects]]"
 description: Work through the Rust Book and build practice projects.
-start-date: 2024-11-01
+start-date: 2026-06-01
 end-date:
 ---
 
@@ -21,6 +21,10 @@ Learning Rust to expand my systems programming knowledge. Working through "The R
 
 ## Next Steps
 
-- [ ] Resume chapter 5
-- [ ] Build a file organizer CLI as practice
+- [[read-rust-chapter]]
+- [ ] Build a file organiser CLI as practice
 - [ ] Look into Rust web frameworks
+
+## Tasks
+
+![[Tasks.base#Linked Tasks]]
