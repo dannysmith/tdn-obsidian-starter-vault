@@ -23,15 +23,13 @@ Bases, Templates and wikilinks are already set up.
 
 ## Taskdn Plugin (Optional)
 
-The [Taskdn plugin](https://github.com/dannysmith/obsidian-taskdn) renders wikilinks to tasks as interactive widgets. See `example-note.md` for a demonstration.
+The [Taskdn plugin](https://community.obsidian.md/plugins/taskdn) renders wikilinks to tasks as interactive widgets. See `example-note.md` for a demonstration.
 
 1. Go to **Settings → Community plugins** and turn on community plugins
 2. Click **Browse**, search for "Taskdn", then install and enable it
 3. In the plugin settings, set:
    - Tasks directory: `tasks`
    - Ignored files: `Overview.md` (so links to the tasks Overview don't render as a task)
-
-If Taskdn isn't in the store yet, install it with [BRAT](https://github.com/TfTHacker/obsidian42-brat) instead: install and enable BRAT from **Browse**, run **BRAT: Add a beta plugin for testing** from the command palette, enter `dannysmith/obsidian-taskdn`, then enable Taskdn in **Community plugins**.
 
 ## Vault Structure
 
